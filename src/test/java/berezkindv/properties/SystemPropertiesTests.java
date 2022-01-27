@@ -38,8 +38,26 @@ public class SystemPropertiesTests {
     }
 
     @Test
+    @Tag("properties")
     void someTest5() {
         String browser = System.getProperty("browser");
         System.out.println(browser);
+        //  запускаем в терминале с - gradle clean properties_tests
+        //  получаем - null
+
+        //  запускаем в терминале с - gradle clean properties_tests -Dbrowser=chrome
+        //  получаем - chrome
+    }
+
+    @Test
+    @Tag("properties")
+    void someTest6() {
+        String browser = System.getProperty("browser", "chrome");
+        String version = System.getProperty("version", "91");
+        String browserSize = System.getProperty("browserSize", "300x300");
+
+        System.out.println(browser);
+        System.out.println(version);
+        System.out.println(browserSize);
     }
 }

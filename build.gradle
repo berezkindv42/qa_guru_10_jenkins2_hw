@@ -39,10 +39,10 @@ dependencies {
 
 tasks.withType(Test) {
     useJUnitPlatform()
-    systemProperties(System.getProperties())
+    systemProperties(System.getProperties()) // основная команда для работы со значениями задаваемыми через терминал
 
-//    systemProperty("browser", "safari")
-//    systemProperty("enviroment", System.getProperty("enviroment", "stage")) // preprod, prod, stage
+//    systemProperty("browser", "safari") // жестко задаем переменной browser значение safari // нельза поменять даже из терминала
+//    systemProperty("enviroment", System.getProperty("enviroment", "stage")) // строка для разделения запуска на разных окружениях
 
     testLogging {
         lifecycle {
