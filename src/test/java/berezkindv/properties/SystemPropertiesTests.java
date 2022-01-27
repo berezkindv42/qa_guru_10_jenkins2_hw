@@ -60,4 +60,17 @@ public class SystemPropertiesTests {
         System.out.println(version);
         System.out.println(browserSize);
     }
+
+//        @BeforeAll
+//    static void setUp() {
+//        Configuration.browser = System.getProperty("browser", "chrome");
+//        Configuration.browserVersion = System.getProperty("version", "91");
+//        Configuration.browserSize = System.getProperty("browserSize", "300x300");
+//    }
+
+    @Test
+    @Tag("properties")
+    void someTest7() {
+        System.out.println("I want to say: " + System.getProperty("some text"));
+    }
 }
