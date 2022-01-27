@@ -73,4 +73,5 @@ public class SystemPropertiesTests {
     void someTest7() {
         System.out.println("I want to say: " + System.getProperty("someText"));
     }
+
 }
