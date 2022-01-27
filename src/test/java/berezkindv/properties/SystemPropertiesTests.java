@@ -71,6 +71,6 @@ public class SystemPropertiesTests {
     @Test
     @Tag("properties")
     void someTest7() {
-        System.out.println("I want to say: " + System.getProperty("some text"));
+        System.out.println("I want to say: " + System.getProperty("someText"));
     }
 }
