@@ -18,7 +18,7 @@ public class SystemPropertiesTests {
 
     @Test
     void someTest2() {
-        System.setProperty("someKey", "red value");
+        System.setProperty("someKey", "Red value");
         String someValue = System.getProperty("someKey");
         System.out.println(someValue); // red value
     }
@@ -33,16 +33,13 @@ public class SystemPropertiesTests {
     void someTest4() {
         Boolean someValue = Boolean.parseBoolean(
                 System.getProperty("someKey", "true"));
-
         assertTrue(someValue);
         System.out.println(someValue);
     }
 
     @Test
-    @Tag("properties")
     void someTest5() {
         String browser = System.getProperty("browser");
-
         System.out.println(browser);
     }
 }
