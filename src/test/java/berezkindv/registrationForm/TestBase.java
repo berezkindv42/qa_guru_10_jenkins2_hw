@@ -17,10 +17,15 @@ public class TestBase {
         String login = System.getProperty("login");
         String password = System.getProperty("password");
         String url = System.getProperty("url");
+        String browser = System.getProperty("browser");
+        String browserVersion = System.getProperty("version");
+        String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
+        Configuration.browser = browser;
+        Configuration.browserVersion = browserVersion;
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.remote = "https://" + login + ":" + password + "@" + url;
+        Configuration.remote = remoteUrl;
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
