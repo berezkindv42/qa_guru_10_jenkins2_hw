@@ -3,6 +3,9 @@ package berezkindv.properties;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SystemPropertiesTests {
@@ -60,6 +63,13 @@ public class SystemPropertiesTests {
         System.out.println(browser);
         System.out.println(version);
         System.out.println(browserSize);
+    }
+
+    @Test
+    @Tag("edge")
+    void edgeTest() {
+        open("/automation-practice-form");
+        $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
     }
 
 //        @BeforeAll
