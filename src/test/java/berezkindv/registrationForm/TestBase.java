@@ -18,11 +18,11 @@ public class TestBase {
         String password = System.getProperty("password");
         String url = System.getProperty("url");
 
+        Configuration.browser = System.getProperty("broeser");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://" + login + ":" + password + "@" + url;
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-//        Configuration.remote = System.getProperty("remoteDriverUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
