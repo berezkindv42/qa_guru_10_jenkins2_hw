@@ -14,9 +14,9 @@ public class TestBase {
     @Step("Конфигурируем браузер и удаленный запуск")
     static void beforeAllMethod() {
 
-        String url = System.getProperty("url", "selenoid.autotests.cloud/wd/hub");
-        String login = System.getProperty("login", "user1");
-        String password = System.getProperty("password", "1234");
+        String login = System.getProperty("login");
+        String password = System.getProperty("password");
+        String url = System.getProperty("url");
 
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
