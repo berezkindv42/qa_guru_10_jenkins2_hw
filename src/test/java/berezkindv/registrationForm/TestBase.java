@@ -23,7 +23,7 @@ public class TestBase {
         String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
         Configuration.browser = browser;
-        Configuration.browserVersion = browserVersion; // chrome - 90, 91 opera - 76, 77 firefox - 88, 89
+        Configuration.browserVersion = browserVersion; // available versions: chrome - 90, 91 opera - 76, 77 firefox - 88, 89
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = browserSize;
         Configuration.remote = remoteUrl;
